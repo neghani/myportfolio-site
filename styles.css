@@ -116,7 +116,7 @@ nav ul li:hover,nav ul li:active,nav ul li.active  {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	min-width: 430px;
+	min-width: 320px;
 }
 
 .sectn-me {
