@@ -33,8 +33,7 @@ function navItemsEventBind() {
 function getElement(selector) {
     return document.querySelector(selector);
 }
-
-function toggleMenu() {
+function toggleMenu(event) {
     if (menuState == 'block') {
         menuState = 'none'
     } else {
@@ -43,15 +42,19 @@ function toggleMenu() {
     navigationButton.classList.toggle("active");
     navigationList.classList.toggle('fadeInLeft');
     navigationList.style.display = menuState;
+    if(event) event.preventDefault();
 }
-function resetAllActiveItems(){
+function resetAllActiveItems() {
     for (let index = 0; index < navlistItems.length; index++) {
         const element = navlistItems[index];
         element.classList.remove('active');
     }
 }
-function navigateTopage(e){
+function navigateTopage(e) {
     resetAllActiveItems();
-
-    e.target.classList.add('active')
+    e.target.classList.add('active');
+    var link = e.target.getAttribute('id');
+    if (link == 'myBlog') {
+        window.location.href = 'http://ganeshpilli.me/posts/'
+    }
 }
