@@ -40,6 +40,7 @@ body, html {
 	height: 100%;
 	font-family: 'Open Sans', sans-serif;
 	overflow: hidden;
+	position: fixed;
 }
 
 nav {
@@ -119,19 +120,18 @@ nav ul li:hover, nav ul li:active, nav ul li.active {
 }
 
 .who-am {
-	background-color: #00a6ff;
+	background-color: #03A9F4;
 	text-align: center;
 	background-image: url(imgs/backgroung-tile.png);
 }
 .what-i-do {
-	background-color: #c800ffc7;
-	background-image: url(imgs/backgroung-tile.png);
+	background-color: #16a085;
 	text-align: center;
 
 }
 .my-journey{
-	background-color: #00ff5e;
-	background-image: url(imgs/backgroung-tile.png);
+	background-color: #3F51B5;
+	background-image: url(imgs/backgroung-tile-journey.png);
 	text-align: center;
 }
 
@@ -165,12 +165,20 @@ nav ul li:hover, nav ul li:active, nav ul li.active {
 	overflow-x: hidden;
 	float: left;
 }
-.who-iam img {
+.who-iam img.profile {
 	-webkit-box-shadow: 1px 2px 10px 0px rgb(0, 73, 113);
 	-moz-box-shadow: 1px 2px 10px 0px rgb(0, 73, 113);
 	box-shadow: 1px 2px 10px 0px rgb(0, 73, 113);
 	margin-bottom: 10px;
 	border-radius: 50%;
+}
+.who-am .social-link{
+	padding: 10px;
+}
+
+.who-am .social-link a img{
+	width: 36px;
+	padding: 5px;
 }
 
 .section-container h1 {
@@ -244,7 +252,8 @@ nav ul li:hover, nav ul li:active, nav ul li.active {
 	.who-iam h2 {
 		font-size: 20px;
 	}
-	.who-iam img {
+	.who-iam img.profile {
 		width: 250px
 	}
+
 }

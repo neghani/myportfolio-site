@@ -5,7 +5,9 @@ var menuState = 'none';
 var navlistItems;
 var skillsContainer;
 var documentWidth = document.body.clientWidth;
-var activeLink;
+var activeLink =0;
+var startPos;
+var endPos;
 var skills = [
     { 'name': 'actionsscript', 'url': 'html.png' },
     { 'name': 'actionsscript', 'url': 'css.png' },
@@ -31,7 +33,9 @@ var skills = [
     { 'name': 'actionsscript', 'url': 'rxjs.png' },
     { 'name': 'actionsscript', 'url': 'ts.png' },
 ]
-window.document.onload =    bindEvents();
+document.addEventListener("DOMContentLoaded", function (event) {
+    bindEvents();
+});
 
 function bindEvents() {
     navigationButton = getElement('#navButton');
@@ -42,7 +46,7 @@ function bindEvents() {
     navlistItems = navigationList.children;
     navItemsEventBind();
     buildStage();
-    window.addEventListener('resize',buildStage);
+    window.addEventListener('resize', buildStage);
 }
 function documentBinding(e) {
 
@@ -81,10 +85,10 @@ function resetAllActiveItems() {
 function navigateTopage(e) {
 
     resetAllActiveItems();
-  if(e){
-    e.target.classList.add('active');
-    activeLink = e.target.getAttribute('id');
-  }
+    if (e) {
+        e.target.classList.add('active');
+        activeLink = e.target.getAttribute('id');
+    }
     if (activeLink == 'myBlog') {
         window.location.href = 'http://ganeshpilli.me/posts/'
         return;
@@ -106,3 +110,29 @@ function buildStage() {
     }
     navigateTopage();
 }
+// Register touchstart and touchend listeners for element 'source'
+var src = document.getElementById("mainContainer");
+var clientX, clientY;
+
+src.addEventListener('touchstart', function(e) {
+
+  clientX = e.touches[0].clientX;
+  clientY = e.touches[0].clientY;
+}, false);
+
+src.addEventListener('touchend', function(e) {
+  var deltaX, deltaY;
+  deltaX = e.changedTouches[0].clientX - clientX;
+  deltaY = e.changedTouches[0].clientY - clientY;
+console.log(deltaX)
+  if(deltaX>100 && activeLink>0){
+    console.log("previouse")
+    activeLink--
+    navigateTopage();
+  } else if(deltaX<-100 && activeLink<2){
+    console.log("next")
+    activeLink++
+    navigateTopage();
+  }
+
+}, false);
