@@ -9,7 +9,7 @@ var blockerElement;
 var activeLink = 0;
 var startPos;
 var endPos;
-var skills = [
+/* var skills = [
     { 'name': 'actionsscript', 'url': 'html.png' },
     { 'name': 'actionsscript', 'url': 'css.png' },
     { 'name': 'actionsscript', 'url': 'actionscript.png' },
@@ -33,7 +33,7 @@ var skills = [
     { 'name': 'actionsscript', 'url': 'react.png' },
     { 'name': 'actionsscript', 'url': 'rxjs.png' },
     { 'name': 'actionsscript', 'url': 'ts.png' },
-]
+] */
 document.addEventListener("DOMContentLoaded", function (event) {
     bindEvents();
 });
