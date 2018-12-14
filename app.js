@@ -4,30 +4,32 @@ var navigationList;
 var menuState = 'none';
 var navlistItems;
 var skillsContainer;
-var skills= [
-    {'name':'actionsscript','url':'html.png'},
-    {'name':'actionsscript','url':'css.png'},
-    {'name':'actionsscript','url':'actionscript.png'},
-    {'name':'actionsscript','url':'agile.png'},
-    {'name':'actionsscript','url':'angular.png'},
-    {'name':'actionsscript','url':'bootstrap.png'},
+var documentWidth = document.body.clientWidth;
+var activeLink;
+var skills = [
+    { 'name': 'actionsscript', 'url': 'html.png' },
+    { 'name': 'actionsscript', 'url': 'css.png' },
+    { 'name': 'actionsscript', 'url': 'actionscript.png' },
+    { 'name': 'actionsscript', 'url': 'agile.png' },
+    { 'name': 'actionsscript', 'url': 'angular.png' },
+    { 'name': 'actionsscript', 'url': 'bootstrap.png' },
 
-    {'name':'actionsscript','url':'devOps.png'},
-    {'name':'actionsscript','url':'docker.png'},
-    {'name':'actionsscript','url':'expressjs.png'},
-    {'name':'actionsscript','url':'git.png'},
-   
-    {'name':'actionsscript','url':'illustrator.png'},
-    {'name':'actionsscript','url':'ionic.png'},
-    {'name':'actionsscript','url':'jquery.png'},
-    {'name':'actionsscript','url':'js.png'},
-    {'name':'actionsscript','url':'mongodb.png'},
-    {'name':'actionsscript','url':'msql.png'},
-    {'name':'actionsscript','url':'node.png'},
-    {'name':'actionsscript','url':'photoshop.png'},
-    {'name':'actionsscript','url':'react.png'},
-    {'name':'actionsscript','url':'rxjs.png'},
-    {'name':'actionsscript','url':'ts.png'},
+    { 'name': 'actionsscript', 'url': 'devOps.png' },
+    { 'name': 'actionsscript', 'url': 'docker.png' },
+    { 'name': 'actionsscript', 'url': 'expressjs.png' },
+    { 'name': 'actionsscript', 'url': 'git.png' },
+
+    { 'name': 'actionsscript', 'url': 'illustrator.png' },
+    { 'name': 'actionsscript', 'url': 'ionic.png' },
+    { 'name': 'actionsscript', 'url': 'jquery.png' },
+    { 'name': 'actionsscript', 'url': 'js.png' },
+    { 'name': 'actionsscript', 'url': 'mongodb.png' },
+    { 'name': 'actionsscript', 'url': 'msql.png' },
+    { 'name': 'actionsscript', 'url': 'node.png' },
+    { 'name': 'actionsscript', 'url': 'photoshop.png' },
+    { 'name': 'actionsscript', 'url': 'react.png' },
+    { 'name': 'actionsscript', 'url': 'rxjs.png' },
+    { 'name': 'actionsscript', 'url': 'ts.png' },
 ]
 document.addEventListener("DOMContentLoaded", function (event) {
     bindEvents();
@@ -41,7 +43,8 @@ function bindEvents() {
     document.addEventListener('click', documentBinding)
     navlistItems = navigationList.children;
     navItemsEventBind();
-    buildSkillsPage();
+    buildStage();
+    window.addEventListener('resize',buildStage);
 }
 function documentBinding(e) {
 
@@ -49,7 +52,6 @@ function documentBinding(e) {
         return;
     }
     toggleMenu();
-
 }
 
 function navItemsEventBind() {
@@ -79,29 +81,30 @@ function resetAllActiveItems() {
     }
 }
 function navigateTopage(e) {
+
     resetAllActiveItems();
+  if(e){
     e.target.classList.add('active');
-    var link = e.target.getAttribute('id');
-    if (link == 'myBlog') {
+    activeLink = e.target.getAttribute('id');
+  }
+    if (activeLink == 'myBlog') {
         window.location.href = 'http://ganeshpilli.me/posts/'
         return;
     }
-    document.querySelector(link).scrollIntoView({ 
-        behavior: 'smooth' 
-      });
+    var mainContainer = getElement('.main-container');
+    var sectionItems = document.querySelectorAll('.section-container');
+    mainContainer.style.marginLeft = -(documentWidth * activeLink) + 'px';
 }
 
-function buildSkillsPage (){
-    for (let index = 0; index < skills.length; index++) {
-        const element = skills[index];
-        var skillItem = document.createElement('li');
-        var imgageItem  = document.createElement('img');
-        imgageItem.src = "./imgs/logos/"+element.url;
-        skillItem.appendChild(imgageItem);
-        skillsContainer.appendChild(skillItem);
+function buildStage() {
+    documentWidth = document.body.clientWidth;
+    console.log(documentWidth)
+    var sectionItems = document.querySelectorAll('.section-container');
+    var mainContainer = getElement('.main-container');
+    mainContainer.style.width = (sectionItems.length * 100) + '%';
+    for (let index = 0; index < sectionItems.length; index++) {
+        const element = sectionItems[index];
+        element.style.width = (100 / sectionItems.length) + '%';
     }
- 
-    
-    
-    
+    navigateTopage();
 }
