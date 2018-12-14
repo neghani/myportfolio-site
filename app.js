@@ -31,9 +31,7 @@ var skills = [
     { 'name': 'actionsscript', 'url': 'rxjs.png' },
     { 'name': 'actionsscript', 'url': 'ts.png' },
 ]
-document.addEventListener("DOMContentLoaded", function (event) {
-    bindEvents();
-});
+window.document.onload =    bindEvents();
 
 function bindEvents() {
     navigationButton = getElement('#navButton');
