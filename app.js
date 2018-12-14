@@ -5,6 +5,7 @@ var menuState = 'none';
 var navlistItems;
 var skillsContainer;
 var documentWidth = document.body.clientWidth;
+var documentHeight = document.body.clientHieght;
 var blockerElement;
 var activeLink = 0;
 var startPos;
@@ -43,9 +44,9 @@ window.addEventListener("orientationchange", orientationCheck, false);
 function orientationCheck() {
 
     if (window.orientation == -90 || window.orientation == 90) {
-        blockerElement.style.display = 'block'
+        blockerElement.style.display = 'block';
     } else {
-        blockerElement.style.display = 'none'
+        blockerElement.style.display = 'none';
     }
 
 }
@@ -117,6 +118,7 @@ function buildStage() {
     console.log(documentWidth)
     var sectionItems = document.querySelectorAll('.section-container');
     var mainContainer = getElement('.main-container');
+    getElement('#scrollView').style.height = documentHeight +'px';
     mainContainer.style.width = (sectionItems.length * 100) + '%';
     for (let index = 0; index < sectionItems.length; index++) {
         const element = sectionItems[index];

@@ -1,4 +1,4 @@
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -89,17 +89,6 @@ nav ul li {
 	background-color: #fff;
 	font-weight: bolder;
 	margin-bottom: 3px;
-	-webkit-touch-callout: none;
-	/* iOS Safari */
-	-webkit-user-select: none;
-	/* Safari */
-	-khtml-user-select: none;
-	/* Konqueror HTML */
-	-moz-user-select: none;
-	/* Firefox */
-	-ms-user-select: none;
-	/* Internet Explorer/Edge */
-	user-select: none;
 	/* Non-prefixed version, currently
                                   supported by Chrome and Opera */
 }
@@ -115,8 +104,20 @@ nav ul li:hover, nav ul li:active, nav ul li.active {
 	height: 100%;
 	width: 100%;
 	min-width: 320px;
-	-webkit-transition: margin 0.5s; /* Safari */
-  transition: margin  0.5s;
+	-webkit-transition: margin 0.5s;
+	/* Safari */
+	transition: margin 0.5s;
+	-webkit-touch-callout: none;
+	/* iOS Safari */
+	-webkit-user-select: none;
+	/* Safari */
+	-khtml-user-select: none;
+	/* Konqueror HTML */
+	-moz-user-select: none;
+	/* Firefox */
+	-ms-user-select: none;
+	/* Internet Explorer/Edge */
+	user-select: none;
 }
 
 .who-am {
@@ -124,42 +125,39 @@ nav ul li:hover, nav ul li:active, nav ul li.active {
 	text-align: center;
 	background-image: url(imgs/backgroung-tile.png);
 }
+
 .what-i-do {
 	background-color: #fd79a8;
 	text-align: center;
 	background-image: url(imgs/backgroung-tile.png);
-	
 }
-.skill-sections{
+
+.skill-sections {
 	padding: 20px;
 }
 
-.skill-sections h2{
+.skill-sections h2 {
 	padding: 10px;
+}
 
-   }
-   
-.my-journey{
+.my-journey {
 	background-color: #3F51B5;
 	background-image: url(imgs/backgroung-tile-journey.png);
 	text-align: center;
 }
 
-
 .skills-container li {
 	display: inline-block;
 	width: 125px;
 	height: 125px;
-	padding: 10px;
-	border-radius: 50%;
 	text-align: center;
-
 }
 
-.blocker-container{
+.blocker-container {
 	position: absolute;
 	top: 0;
-	bottom: 0;;
+	bottom: 0;
+	;
 	left: 0;
 	right: 0;
 	z-index: 100;
@@ -173,11 +171,13 @@ nav ul li:hover, nav ul li:active, nav ul li.active {
 	justify-content: center;
 	display: none;
 }
-.blocker-container h1{
+
+.blocker-container h1 {
 	font-size: 30px;
 	text-align: center;
 	padding-top: 50px;
 }
+
 .skills-container li img {
 	width: 70%;
 }
@@ -194,13 +194,13 @@ nav ul li:hover, nav ul li:active, nav ul li.active {
 	float: left;
 }
 
-.section-container .container{
-	padding-top: 90px;
-	padding-bottom: 60px;
-	overflow-y: auto;
-	overflow-x: hidden;
-
+.section-container .container {
+	margin-top: 60px;
+    margin-bottom: 60px;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
+
 .who-iam img.profile {
 	-webkit-box-shadow: 1px 2px 10px 0px rgb(0, 73, 113);
 	-moz-box-shadow: 1px 2px 10px 0px rgb(0, 73, 113);
@@ -208,11 +208,12 @@ nav ul li:hover, nav ul li:active, nav ul li.active {
 	margin-bottom: 10px;
 	border-radius: 50%;
 }
-.who-am .social-link{
+
+.who-am .social-link {
 	padding: 10px;
 }
 
-.who-am .social-link a img{
+.who-am .social-link a img {
 	width: 56px;
 	padding: 10px;
 }
@@ -239,6 +240,37 @@ nav ul li:hover, nav ul li:active, nav ul li.active {
 	-webkit-text-shadow: 1px 2px 10px 0px rgb(0, 73, 113);
 	-moz-text-shadow: 1px 2px 10px 0px rgb(0, 73, 113);
 	text-shadow: 1px 2px 10px 0px rgb(0, 73, 113);
+}
+.journey-width{
+	margin: 0px auto;
+	min-width: 320px;
+	max-width: 550px;
+	width: 100%;
+	padding: 20px;
+	height: 100%;
+}
+.journey-holder {
+	
+	border-left: 2px solid #000;
+}
+.journey  p{
+line-height: 20px;
+font-size: 13px;
+}
+.journey {
+	text-align: left;
+	background: #fff;
+	padding: 20px;
+	margin-bottom: 27px;
+}
+
+.journey .time {
+	background: #000;
+	color: #fff;
+	margin: -38px 0px 20px -22px;
+	padding: 10px;
+	display: block;
+	width: 50px;
 }
 
 /* 
@@ -291,17 +323,17 @@ nav ul li:hover, nav ul li:active, nav ul li.active {
 	.who-iam img.profile {
 		width: 250px
 	}
-	.who-am .social-link a img{
+	.who-am .social-link a img {
 		width: 36px;
 		padding: 5px;
 	}
-
 	.skills-container li {
 		width: 64px;
 		height: 64px;
 		margin: 0;
 		padding: 0;
 	}
-	
-
+	.journey-width{
+		max-width: 340px;
+	}
 }
