@@ -125,10 +125,20 @@ nav ul li:hover, nav ul li:active, nav ul li.active {
 	background-image: url(imgs/backgroung-tile.png);
 }
 .what-i-do {
-	background-color: #16a085;
+	background-color: #fd79a8;
 	text-align: center;
-
+	background-image: url(imgs/backgroung-tile.png);
+	
 }
+.skill-sections{
+	padding: 20px;
+}
+
+.skill-sections h2{
+	padding: 10px;
+
+   }
+   
 .my-journey{
 	background-color: #3F51B5;
 	background-image: url(imgs/backgroung-tile-journey.png);
@@ -144,12 +154,33 @@ nav ul li:hover, nav ul li:active, nav ul li.active {
 	padding: 10px;
 	border-radius: 50%;
 	text-align: center;
-	margin: 10px;
 
 }
 
+.blocker-container{
+	position: absolute;
+	top: 0;
+	bottom: 0;;
+	left: 0;
+	right: 0;
+	z-index: 100;
+	background-color: white;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	display: none;
+}
+.blocker-container h1{
+	font-size: 30px;
+	text-align: center;
+	padding-top: 50px;
+}
 .skills-container li img {
-	width: 80%;
+	width: 70%;
 }
 
 .section-container {
@@ -177,8 +208,8 @@ nav ul li:hover, nav ul li:active, nav ul li.active {
 }
 
 .who-am .social-link a img{
-	width: 36px;
-	padding: 5px;
+	width: 56px;
+	padding: 10px;
 }
 
 .section-container h1 {
@@ -255,5 +286,17 @@ nav ul li:hover, nav ul li:active, nav ul li.active {
 	.who-iam img.profile {
 		width: 250px
 	}
+	.who-am .social-link a img{
+		width: 36px;
+		padding: 5px;
+	}
+
+	.skills-container li {
+		width: 64px;
+		height: 64px;
+		margin: 0;
+		padding: 0;
+	}
+	
 
 }

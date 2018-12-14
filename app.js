@@ -5,7 +5,8 @@ var menuState = 'none';
 var navlistItems;
 var skillsContainer;
 var documentWidth = document.body.clientWidth;
-var activeLink =0;
+var blockerElement;
+var activeLink = 0;
 var startPos;
 var endPos;
 var skills = [
@@ -36,13 +37,26 @@ var skills = [
 document.addEventListener("DOMContentLoaded", function (event) {
     bindEvents();
 });
+window.addEventListener("orientationchange", orientationCheck, false);
 
+
+function orientationCheck() {
+
+    if (window.orientation == -90 || window.orientation == 90) {
+        blockerElement.style.display = 'block'
+    } else {
+        blockerElement.style.display = 'none'
+    }
+
+}
 function bindEvents() {
     navigationButton = getElement('#navButton');
     navigationList = getElement('#navItemsContainer');
     skillsContainer = getElement('#skillsContainer');
+    blockerElement = getElement('#blockerDiv')
     navigationButton.addEventListener('click', toggleMenu)
     document.addEventListener('click', documentBinding)
+    orientationCheck();
     navlistItems = navigationList.children;
     navItemsEventBind();
     buildStage();
@@ -114,25 +128,25 @@ function buildStage() {
 var src = document.getElementById("mainContainer");
 var clientX, clientY;
 
-src.addEventListener('touchstart', function(e) {
+src.addEventListener('touchstart', function (e) {
 
-  clientX = e.touches[0].clientX;
-  clientY = e.touches[0].clientY;
+    clientX = e.touches[0].clientX;
+    clientY = e.touches[0].clientY;
 }, false);
 
-src.addEventListener('touchend', function(e) {
-  var deltaX, deltaY;
-  deltaX = e.changedTouches[0].clientX - clientX;
-  deltaY = e.changedTouches[0].clientY - clientY;
-console.log(deltaX)
-  if(deltaX>100 && activeLink>0){
-    console.log("previouse")
-    activeLink--
-    navigateTopage();
-  } else if(deltaX<-100 && activeLink<2){
-    console.log("next")
-    activeLink++
-    navigateTopage();
-  }
+src.addEventListener('touchend', function (e) {
+    var deltaX, deltaY;
+    deltaX = e.changedTouches[0].clientX - clientX;
+    deltaY = e.changedTouches[0].clientY - clientY;
+    console.log(deltaX)
+    if (deltaX > 100 && activeLink > 0) {
+        console.log("previouse")
+        activeLink--
+        navigateTopage();
+    } else if (deltaX < -100 && activeLink < 2) {
+        console.log("next")
+        activeLink++
+        navigateTopage();
+    }
 
 }, false);
