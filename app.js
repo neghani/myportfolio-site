@@ -141,11 +141,11 @@ src.addEventListener('touchend', function (e) {
     deltaX = e.changedTouches[0].clientX - clientX;
     deltaY = e.changedTouches[0].clientY - clientY;
     console.log(deltaX)
-    if (deltaX > 100 && activeLink > 0) {
+    if (deltaX > 150 && activeLink > 0) {
         console.log("previouse")
         activeLink--
         navigateTopage();
-    } else if (deltaX < -100 && activeLink < 2) {
+    } else if (deltaX < -150 && activeLink < 2) {
         console.log("next")
         activeLink++
         navigateTopage();
