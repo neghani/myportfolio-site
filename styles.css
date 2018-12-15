@@ -46,7 +46,7 @@ body, html {
 nav {
 	position: fixed;
 	top: 20px;
-	left: 20px;
+	right: 20px;
 	color: #000;
 	z-index: 10;
 }
@@ -73,31 +73,32 @@ nav ul {
 	padding: 0;
 	margin: 0;
 	top: 30px;
-	left: 0px;
+	right: 0px;
 	display: block;
 	width: 230px;
 	display: none;
 	animation-duration: 0.2s !important;
+	background-color: #000;
 }
-
+#loaderGif{
+	margin:200px auto; width: 200px; height: 200px; background-image:url(imgs/loading.gif); background-position: center center;
+}
 nav ul li {
 	padding: 0;
 	margin: 0;
 	display: block;
 	padding: 10px;
-	color: #000;
-	background-color: #fff;
+	color: #fff;
+	background-color: #000;
 	font-weight: bolder;
-	margin-bottom: 3px;
 	/* Non-prefixed version, currently
                                   supported by Chrome and Opera */
 }
 
 nav ul li:hover, nav ul li:active, nav ul li.active {
-	color: #fff;
-	color: #fff;
-	background-color: #000;
-	/* background-color: #000; */
+	
+	color: #000;
+	background-color: #fff;
 }
 
 .main-container {
@@ -146,24 +147,7 @@ nav ul li:hover, nav ul li:active, nav ul li.active {
 	background-image: url(imgs/backgroung-tile-journey.png);
 	text-align: center;
 }
-.skills-container {
-	margin-top: 20px;
-	background: #fff;
-	padding: 22px 5px;
-	width: 650px;
-	border-radius: 6px;
-	
-}
 
-.skills-container li {
-	display: inline-block;
-	width: 125px;
-	height: 100px;
-	text-align: center;
-	vertical-align: middle;
-	align-items: center;
-
-}
 
 .blocker-container {
 	position: absolute;
@@ -189,10 +173,6 @@ nav ul li:hover, nav ul li:active, nav ul li.active {
 	text-align: center;
 	padding-top: 50px;
 
-}
-
-.skills-container li img {
-	width: 70%;
 }
 
 .section-container {
@@ -297,6 +277,33 @@ font-size: 13px;
 	display: block;
 	width: 50px;
 }
+.skills-container {
+	margin-top: 20px;
+	background: #fff;
+	padding: 22px 5px;
+	width: 650px;
+	border-radius: 6px;
+	
+}
+
+.skills-container li {
+	display: inline-block;
+	width: 125px;
+	height: 100px;
+	text-align: center;
+	vertical-align: middle;
+	align-items: center;
+
+}
+
+
+.skills-container li img {
+	width: 70%;
+}
+
+ .skills-heading{
+	text-transform: none !important;
+}
 
 /* 
   ##Device = Desktops
@@ -363,6 +370,5 @@ font-size: 13px;
 	}
 	.journey-width{
 		max-width: 320px;
-		max-height: 470px
 	}
 }

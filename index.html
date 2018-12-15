@@ -18,10 +18,12 @@
 </head>
 
 <body>
+    <div id="loaderGif" > </div>
     <div id="blockerDiv" class="blocker-container">
         <h1>Portrait mode view only.</h1>
     </div>
-    <nav class="animated fadeInDown">
+
+    <nav class="animated fadeInDown" id="nav" style="display: none"> 
         <a href="#" id="navButton" class="navigation-button ">MENU</a>
         <ul id="navItemsContainer" class="animated ">
             <li id="0" class="active">Home</li>
@@ -30,11 +32,11 @@
             <li id="myBlog">My Blog</li>
         </ul>
     </nav>
-    <div id="mainContainer" class="main-container ">
+    <div id="mainContainer" class="main-container " style="display:none">
 
         <div id="whoIam" class="who-iam section-container who-am">
-            <div class="container" style="max-width:500px">
-                <img src="imgs/profile.png" class="animated fadeInDown profile box-shadow" alt="profile-photo" width="300">
+            <div class="container animated fadeInDown" style="max-width:500px">
+                <img src="imgs/profile.png" class=" profile box-shadow" alt="profile-photo" width="300">
                 <h1 class="animated fadeInDown">
                     Ganesh Pilli
                 </h1>
@@ -80,7 +82,7 @@
         <div id="whatMyjourney" class="my-journey section-container">
             <div class="container">
                 <div class="skill-sections">
-                    <h2 class="">My Skills</h2>
+                    <h2 class="skills-heading">My Skills</h2>
                     <ul class="skills-container box-shadow">
                         <li><img src="./imgs/logos/html.png"></li>
                         <li><img src="./imgs/logos/css.png"></li>

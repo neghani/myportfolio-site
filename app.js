@@ -1,4 +1,5 @@
 'strict'
+
 var navigationButton;
 var navigationList;
 var menuState = 'none';
@@ -87,7 +88,7 @@ function toggleMenu(event) {
         menuState = 'block'
     }
     navigationButton.classList.toggle("active");
-    navigationList.classList.toggle('fadeInLeft');
+    navigationList.classList.toggle('fadeInRight');
     navigationList.style.display = menuState;
     if (event) event.preventDefault();
 }
@@ -117,15 +118,20 @@ function buildStage() {
     documentWidth = document.body.clientWidth;
     console.log(documentWidth)
     var sectionItems = document.querySelectorAll('.section-container');
+    var navContainer = getElement('nav');
+    var loaderGif = getElement('#loaderGif')
     var mainContainer = getElement('.main-container');
-    console.log(getElement('#scrollView'))
     getElement('#scrollView').style.height = (documentHeight-130) +'px';
-    console.log((documentHeight-130) )
+    
     mainContainer.style.width = (sectionItems.length * 100) + '%';
     for (let index = 0; index < sectionItems.length; index++) {
         const element = sectionItems[index];
         element.style.width = (100 / sectionItems.length) + '%';
     }
+    loaderGif.style.display = 'none';
+    navContainer.style.display = 'block';
+    mainContainer.style.display = 'flex';
+    
     navigateTopage();
 }
 // Register touchstart and touchend listeners for element 'source'
