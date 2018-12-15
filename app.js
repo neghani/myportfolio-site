@@ -5,7 +5,7 @@ var menuState = 'none';
 var navlistItems;
 var skillsContainer;
 var documentWidth = document.body.clientWidth;
-var documentHeight = document.body.clientHieght;
+var documentHeight = document.body.offsetHeight;
 var blockerElement;
 var activeLink = 0;
 var startPos;
@@ -118,7 +118,9 @@ function buildStage() {
     console.log(documentWidth)
     var sectionItems = document.querySelectorAll('.section-container');
     var mainContainer = getElement('.main-container');
-    getElement('#scrollView').style.height = documentHeight +'px';
+    console.log(getElement('#scrollView'))
+    getElement('#scrollView').style.height = (documentHeight-130) +'px';
+    console.log((documentHeight-130) )
     mainContainer.style.width = (sectionItems.length * 100) + '%';
     for (let index = 0; index < sectionItems.length; index++) {
         const element = sectionItems[index];
