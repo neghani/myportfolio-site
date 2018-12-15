@@ -38,18 +38,21 @@ var endPos;
 ] */
 document.addEventListener("DOMContentLoaded", function (event) {
     bindEvents();
+    window.addEventListener("orientationchange", orientationCheck, false);
 });
-window.addEventListener("orientationchange", orientationCheck, false);
+
 
 
 function orientationCheck() {
 
     if (window.orientation == -90 || window.orientation == 90) {
+        buildStage()
         blockerElement.style.display = 'block';
     } else {
         blockerElement.style.display = 'none';
     }
-
+   
+    
 }
 function bindEvents() {
     navigationButton = getElement('#navButton');
@@ -116,7 +119,6 @@ function navigateTopage(e) {
 
 function buildStage() {
     documentWidth = document.body.clientWidth;
-    console.log(documentWidth)
     var sectionItems = document.querySelectorAll('.section-container');
     var navContainer = getElement('nav');
     var loaderGif = getElement('#loaderGif')
