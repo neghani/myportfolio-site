@@ -1,4 +1,5 @@
 'strict'
+
 var navigationButton;
 var navigationList;
 var menuState = 'none';
@@ -10,6 +11,31 @@ var blockerElement;
 var activeLink = 0;
 var startPos;
 var endPos;
+/* var skills = [
+    { 'name': 'actionsscript', 'url': 'html.png' },
+    { 'name': 'actionsscript', 'url': 'css.png' },
+    { 'name': 'actionsscript', 'url': 'actionscript.png' },
+    { 'name': 'actionsscript', 'url': 'agile.png' },
+    { 'name': 'actionsscript', 'url': 'angular.png' },
+    { 'name': 'actionsscript', 'url': 'bootstrap.png' },
+
+    { 'name': 'actionsscript', 'url': 'devOps.png' },
+    { 'name': 'actionsscript', 'url': 'docker.png' },
+    { 'name': 'actionsscript', 'url': 'expressjs.png' },
+    { 'name': 'actionsscript', 'url': 'git.png' },
+
+    { 'name': 'actionsscript', 'url': 'illustrator.png' },
+    { 'name': 'actionsscript', 'url': 'ionic.png' },
+    { 'name': 'actionsscript', 'url': 'jquery.png' },
+    { 'name': 'actionsscript', 'url': 'js.png' },
+    { 'name': 'actionsscript', 'url': 'mongodb.png' },
+    { 'name': 'actionsscript', 'url': 'msql.png' },
+    { 'name': 'actionsscript', 'url': 'node.png' },
+    { 'name': 'actionsscript', 'url': 'photoshop.png' },
+    { 'name': 'actionsscript', 'url': 'react.png' },
+    { 'name': 'actionsscript', 'url': 'rxjs.png' },
+    { 'name': 'actionsscript', 'url': 'ts.png' },
+] */
 document.addEventListener("DOMContentLoaded", function (event) {
     bindEvents();
     window.addEventListener("orientationchange", orientationCheck, false);
@@ -18,13 +44,13 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
 
 function orientationCheck() {
- buildStage();
-   /*  if (window.orientation == -90 || window.orientation == 90) {
+
+    if (window.orientation == -90 || window.orientation == 90) {
         buildStage()
         blockerElement.style.display = 'block';
     } else {
         blockerElement.style.display = 'none';
-    } */
+    }
    
     
 }
@@ -34,11 +60,10 @@ function bindEvents() {
     skillsContainer = getElement('#skillsContainer');
     blockerElement = getElement('#blockerDiv')
     navigationButton.addEventListener('click', toggleMenu)
-    document.addEventListener('click', documentBinding);
+    document.addEventListener('click', documentBinding)
+    orientationCheck();
     navlistItems = navigationList.children;
     navItemsEventBind();
-   
-    //orientationCheck();
     buildStage();
     window.addEventListener('resize', buildStage);
 }
@@ -98,11 +123,7 @@ function buildStage() {
     var navContainer = getElement('nav');
     var loaderGif = getElement('#loaderGif')
     var mainContainer = getElement('.main-container');
-   console.log(documentHeight)
-       if(documentHeight<700){
-        getElement('#scrollView').style.height = (documentHeight-130) +'px';
-       }
-   
+    getElement('#scrollView').style.height = (documentHeight-130) +'px';
     
     mainContainer.style.width = (sectionItems.length * 100) + '%';
     for (let index = 0; index < sectionItems.length; index++) {

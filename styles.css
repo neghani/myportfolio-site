@@ -128,7 +128,7 @@ nav ul li:hover, nav ul li:active, nav ul li.active {
 }
 
 .what-i-do {
-	background-color: #ff9b4f;
+	background-color: #fd79a8;
 	text-align: center;
 	background-image: url(imgs/backgroung-tile.png);
 }
@@ -188,7 +188,7 @@ nav ul li:hover, nav ul li:active, nav ul li.active {
 }
 
 .section-container .container {
-	    margin-top: 80px;
+	margin-top: 60px;
     margin-bottom: 60px;
     overflow-y: auto;
     overflow-x: hidden;
@@ -251,6 +251,7 @@ nav ul li:hover, nav ul li:active, nav ul li.active {
 	max-width: 550px;
 	width: 100%;
 	padding: 20px;
+	height: 100%;
 	
 }
 .journey-holder {
@@ -323,23 +324,7 @@ font-size: 13px;
 	##Screen = B/w 768px to 1024px
   */
 
-@media (min-width: 768px) and (max-width: 1024px) {
-	.skills-container li img{
-		width: 100%
-	}
-	.skills-container{
-		width: 700px;
-	}
-	.skills-container li {
-		width: 86px;
-		height: 86px;
-		margin: 0;
-		padding: 25px;
-	}
-	.journey-width{
-		max-width: 420px;
-	}
-}
+@media (min-width: 768px) and (max-width: 1024px) {}
 
 /* 
 	##Device = Tablets, Ipads (landscape)
@@ -353,35 +338,7 @@ font-size: 13px;
 	##Screen = B/w 481px to 767px
   */
 
-@media (min-width: 481px) and (max-width: 767px) {
-	.who-iam  .pro-image img{
-		max-width: 100%;
-	}
-	.section-container .container {
-		display:flex;
-		flex-flow: row;
-		max-width: 80%;
-	}
-	.section-container .container  h1{
-		font-size: 40px;
-	}
-	.who-am .social-link a img {
-		width: 36px;
-		padding: 5px;
-	}
-	.skills-container{
-		width: 500px;
-	}
-	.skills-container li {
-		width: 64px;
-		height: 64px;
-		margin: 0;
-		padding: 0;
-	}
-	.journey-width{
-		max-width: 420px;
-	}
-}
+@media (min-width: 481px) and (max-width: 767px) {}
 
 /* 
 	##Device = Most of the Smartphones Mobiles (Portrait)
