@@ -98,6 +98,9 @@ a {
   box-shadow: 8px 8px #fe5c57;
   border: 1px solid #000;
 }
+.yellow-shadow{
+	box-shadow: 8px 8px #fdad00;
+}
 .blue-shadow {
   box-shadow: 8px 8px #008cb9;
 }
