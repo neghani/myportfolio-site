@@ -70,8 +70,9 @@ ul.text li {
   flex-wrap: wrap;
   margin: 24px 0px;
   gap: 24px 34px;
-  justify-content: center;
+
 }
+
 .social-link a {
   color: #000;
 }
@@ -118,7 +119,7 @@ a {
 
 .card {
   border: 1px solid #000;
-  max-width: 512px;
+
   padding: 20px 28px;
   margin: 2.5rem 0;
 }
