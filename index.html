@@ -1,120 +1,210 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="icon" sizes="192x192" href="imgs/profile.png" />
+    <title>Ganesh Kumar Pilli | Fullstack Developer</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="./responsive-font.css" />
 
-    <meta name="viewport" content="width=device-width">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <link rel="manifest" href="/manifest.json">
-    <link rel="icon" sizes="192x192" href="imgs/profile.png">
-    <title>Ganesh Kumar Pilli | UI Developer & UX Consultant</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
-</head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    
+  </head>
+  <body>
+    <div class="header">
+      <div class="container vertical-flow">
+        <div class="intro-text">
+          <h1 class="play-fair heading-5">Hi I am Ganesh Pilly</h1>
 
-<body>
-    <div id="loaderGif" > </div>
-    <div id="blockerDiv" class="blocker-container">
-        <h1>Portrait mode view only.</h1>
+          <p class="sub-heading play-fair">
+            Lead Software Engineer | CSM® | Full Stack Developer | JavaScript |
+            Nodejs | Angular | ReactJs | Microservices | Tech Trainer
+          </p>
+          
+          <div class="social-links">
+            <div class="social-link">
+              <img src="./icons/li.png" width="32" alt="">
+              <a target="_blank" href="https://www.linkedin.com/in/ganeshpilli/">LinkedIn</a>
+            </div>
+            <div class="social-link">
+              <img src="./icons/fb.png" width="32" alt="">
+              <a target="_blank" href="https://www.instagram.com/ganeshkumarpilli/">Facebook</a>
+            </div>
+            <div class="social-link">
+              <img src="./icons/insta.png" width="32" alt="">
+              <a target="_blank" href="https://www.instagram.com/ganeshkumarpilli/">Instagram</a>
+            </div>
+            <div class="social-link">
+              <img src="./icons/tw.png" width="32" alt="">
+              <a target="_blank" href="https://twitter.com/neghani">Twitter</a>
+            </div>
+            <div class="social-link">
+              <img src="./icons/yt.png" width="32" alt="">
+              <a target="_blank" href="https://www.youtube.com/@GaneshPilli">Youtube</a>
+            </div>
+          </div>
+          <p class="text">
+            Ph:<a href="tel:9966057232"> +91 99660 57232</a>, Email:
+            <a href="emailto: neghani@gmail.com"> neghani@gmail.com</a>
+          </p>
+        </div>
+        <div class="photo">
+          <img src="./imgs/profile.png" class="red-shadow" />
+        </div>
+      </div>
     </div>
-
-    <nav class="animated fadeInDown" id="nav" style="display: none"> 
-        <a href="#" id="navButton" class="navigation-button ">MENU</a>
-        <ul id="navItemsContainer" class="animated ">
-            <li id="0" class="active">Home</li>
-            <li id="1">My Journey</li>
-            <li id="2">My Skills</li>
-            <li id="myBlog">My Blog</li>
-        </ul>
-    </nav>
-    <div id="mainContainer" class="main-container " style="display:none">
-
-        <div id="whoIam" class="who-iam section-container who-am">
-            <div class="container animated fadeInDown" style="max-width:500px">
-                <img src="imgs/profile.png" class=" profile box-shadow" alt="profile-photo" width="300">
-                <h1 class="animated fadeInDown">
-                    Ganesh Pilli
-                </h1>
-                <br/>
-                <h2 class="animated fadeInDown">
-                    UI/UX Developer
-                </h2>
-                <div class="social-link animated fadeInDown">
-                    <a href="https://www.facebook.com/pilliganeshkumar/" target="_blank"> <img src="imgs/facebook-icon.png"></a>
-                    <a href="https://www.linkedin.com/in/ganeshpilli" target="_blank"> <img src="imgs/linkedin.png"></a>
-                    <a href="https://www.youtube.com/user/ganesh05p/" target="_blank"> <img src="imgs/youtube-icon.png"></a>
-                    <a href="https://twitter.com/neghani" target="_blank"> <img src="imgs/twitter-icon.png"></a>
-                    <a href="mailto:callmegk@icloud.com?Subject=HelloFromYouSite"> <img src="imgs/email-icon.png"></a>
-                </div>
-                <p class="bio-info">11+ years of UI Development Experience. Agile Development. DevOps centric expertise.</p>
+    <div class="profession">
+      <div class="container">
+        <div class="companies">
+          <h1 class="play-fair heading">Work Experience</h1>
+          <div class="card work-experience-card blue-shadow">
+            <div class="head">
+              <div>
+                <h1 class="sub-heading">Lead Engineer</h1>
+                <p class="sub-text">Aug 2017 - Till Date - HYD</p>
+              </div>
+              <img src="./imgs/berkadia.png" width="150" alt="" />
             </div>
-        </div>
-        <div id="whatIdo" class="what-i-do section-container" style="display:block;">
-            <div id="scrollView" class="container journey-width">
-                <div class="journey-holder">
-                    <div class="journey box-shadow ">
-                        <h3 class="time"> 2008 </h3>
-                        <p> Started career as <b>Multimedia Designer</b> with TMI Group of Companies here. Served here
-                            for 5+ years and left TMI in 2013 with a title of <b>Team Lead</b>.</p>
-                    </div>
-                    <div class="journey box-shadow">
-                        <h3 class="time"> 2013 </h3>
-                        <p>Joined Tech Mahindra as <b>SME-UI</b>. Here I was Responsible for Mobile App Development,
-                            Analytics and Dashboard Development. Served here for 3+ years. </p>
-                    </div>
-                    <div class="journey box-shadow">
-                        <h3 class="time"> 2016 </h3>
-                        <p>Joined CapGemini as <b>Senior Consultant</b>. Served here as Agile Product Developer. Had to leave CapGemini in the finacial grounds. </p>
-                    </div>
-                    <div class="journey box-shadow">
-                        <h3 class="time"> 2017</h3>
-                        <p>Joined berkadia as a <b>Senior Software Engineer</b>, Here I am responsible for Agile Product Delivery. Being part of <b>Self Organised Team</b> is awesome  </p>
-                    </div>
-
-                </div>
+            <div class="body">
+              <ul class="text two-column">
+                <li>Agile Team Lead</li>
+                <li>Full-stack Developer</li>
+                <li>Product Development</li>
+                <li>MEANStack Engineering</li>
+                <li>TDD</li>
+                <li>Mentorship</li>
+                <li>People Leader</li>
+                <li>Containerization & Sysops</li>
+              </ul>
             </div>
-        </div>
-        <div id="whatMyjourney" class="my-journey section-container">
-            <div class="container">
-                <div class="skill-sections">
-                    <h2 class="skills-heading">My Skills</h2>
-                    <ul class="skills-container box-shadow">
-                        <li><img src="./imgs/logos/html.png"></li>
-                        <li><img src="./imgs/logos/css.png"></li>
-                        <li><img src="./imgs/logos/bootstrap.png"></li>
-                        <li><img src="./imgs/logos/js.png"></li>
-                        <li><img src="./imgs/logos/angular.png"></li>
-                        <li><img src="./imgs/logos/react.png"></li>
-                        <li><img src="./imgs/logos/rxjs.png"></li>
-                        <li><img src="./imgs/logos/ts.png"></li>
-                        <li><img src="./imgs/logos/ionic.png"></li>
-                        <li><img src="./imgs/logos/jquery.png"></li>
-                        <li><img src="./imgs/logos/illustrator.png"></li>
-                        <li><img src="./imgs/logos/photoshop.png"></li>
-                        <li><img src="./imgs/logos/docker.png"></li>
-                        <li><img src="./imgs/logos/agile.png"></li>
-                        <li><img src="./imgs/logos/git.png"></li>
-                        <li><img src="./imgs/logos/devOps.png"></li>
-                        <li><img src="./imgs/logos/expressjs.png"></li>
-                        <li><img src="./imgs/logos/mongodb.png"></li>
-                        <li><img src="./imgs/logos/msql.png"></li>
-                        <li><img src="./imgs/logos/node.png"></li>
-                    </ul>
-                </div>
+          </div>
 
-
-                </ul>
-
+          <div class="card work-experience-card light-blue-shadow">
+            <div class="head">
+              <div>
+                <h1 class="sub-heading">Senior Consultant</h1>
+                <p class="sub-text">Feb 2016 - Aug 2017 - HYD</p>
+              </div>
+              <img src="./imgs/capgemini.png" width="150" alt="" />
             </div>
+            <div class="body">
+              <ul class="text two-column">
+                <li>Agile Team Lead</li>
+                <li>Full-stack Developer</li>
+                <li>Product Development(Web)</li>
+                <li>MEANStack Engineering</li>
+                <li>TDD</li>
+                <li>Mentorship</li>
+                <li>People Leader</li>
+                <li>Web and Mobile Tech</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card work-experience-card red-shadow">
+            <div class="head">
+              <div>
+                <h1 class="sub-heading">Subject Matter Expert(Apps)</h1>
+                <p class="sub-text">Jun 2013 - Feb 2016 - HYD</p>
+              </div>
+              <img src="./imgs/techm.png" width="100" alt="" />
+            </div>
+            <div class="body">
+              <ul class="text two-column">
+                <li>Hybrid App Development</li>
+                <li>Data Analytic</li>
+                <li>Product Development(Web)</li>
+                <li>Web Development</li>
+                <li>Technical Mentor</li>
+                <li>Mentorship</li>
+                <li>People Leader</li>
+                <li>iPad Apps</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card work-experience-card red-shadow">
+            <div class="head">
+              <div>
+                <h1 class="sub-heading">Team Lead</h1>
+                <p class="sub-text">Jan 2008 - Apr 2013 - HYD</p>
+              </div>
+              <img src="./imgs/techm.png" width="100" alt="" />
+            </div>
+            <div class="body">
+              <ul class="text two-column">
+                
+
+                <li>Creative Content</li>
+                <li>e-Learning content</li>
+                <li>CBT, WBT Development</li>
+                <li>Innovative Content Design</li>
+                <li>Technical Mentor</li>
+                <li>Mentorship</li>
+                <li>People Leader</li>
+                <li>Action Script Games</li>
+              </ul>
+            </div>
+          </div>
         </div>
+        <div class="summary">
+          <h1 class="play-fair heading">Professional Summary</h1>
+          <div class="card ash-shadow">
+            <ul class="text">
+              <li class="text">
+                15+ years of IT experience, performed multiple roles like
+                architect, lead, Full stack developer
+              </li>
+              <li>Skilled Agile Developer</li>
+              <li>Strong individual contributor</li>
+              <li>Strong in building UI and expert in building backend</li>
+              <li>
+                Strong familiarity with a wide portfolio of software languages
+                and applications including MEAN and MERN stack
+              </li>
+              <li>
+                Having hands on experience in Test Driven Development Having
+                strong knowledge of building design systems
+              </li>
+
+              <li>
+                Experience in Micro Service based cloud computing architecture
+                using Docker and Kubernetes.
+              </li>
+
+              <li>
+                Having hands on experience on event sourcing pattern. High
+                ability to work on SOA and Agile projects.
+              </li>
+            </ul>
+          </div>
+          <h1 class="play-fair heading">Certifications & Education</h1>
+          <div class="card ash-shadow">
+           <p class="sub-heading">Certified SCRUM Master</p>
+           <p class="text">SCRUM Certification by scrumalliance.org</p>
+           <p class="sub-heading">Leadership Communication</p>
+           <p class="text">Certificate of Achievement by Dale Carnegie</p>
+           <p class="sub-heading">Diploma in web design from</p>
+           <p class="text">Prism Multimedia Hyderabad - 80%</p>
+           <p class="sub-heading">College</p>
+           <p class="text">I am a drop-out.</p>
+           <p class="sub-heading">Secondary School Certificate</p>
+           <p class="text">Z.P.S.S School Cherial, Siddipet - 78%</p>
+          </div>
+        </div>
+      </div>
     </div>
-
-    <script src="app.js"></script>
-</body>
-
+  </body>
 </html>

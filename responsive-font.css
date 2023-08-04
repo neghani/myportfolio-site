@@ -1,0 +1,77 @@
+:root {
+  --font-xxl: 5rem;
+  --font-xl: 2rem;
+  --font-l: 1.5rem;
+  --font-m: 1.25rem;
+  --font-sm: 1rem;
+  --font-xsm: 0.75rem;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  :root {
+    --font-xxl: 3rem;
+    --font-xl: 1.5rem;
+    --font-l: 1.25rem;
+    --font-m: 1rem;
+    --font-sm: 1rem;
+    --font-xsm: 0.55rem;
+  }
+  .vertical-flow {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .profession .container {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+  .two-column {
+    column-gap: 14px;
+    -webkit-column-gap: 14px;
+    -moz-column-gap: 14px;
+  }
+
+  .container {
+    width: 100% !important;
+    padding: 34px 24px;
+  }
+  .two-column {
+    columns: 1;
+    -webkit-columns: 1;
+    -moz-columns: 1;
+    column-gap: 32px;
+    -webkit-column-gap: 32px;
+    -moz-column-gap: 32px;
+  }
+  .card {
+    max-width: 100% !important;
+    overflow: hidden;
+  }
+  .photo {
+    text-align: center;
+  }
+.intro-text .text{
+	text-align: center;
+}
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  :root {
+    --font-xxl: 4rem;
+    --font-xl: 1.5rem;
+    --font-l: 1.25rem;
+    --font-m: 1rem;
+    --font-sm: 1rem;
+    --font-xsm: 0.55rem;
+  }
+  .two-column {
+    columns: auto !important;
+    -webkit-columns: auto !important;
+    -moz-columns: auto !important;
+    column-gap: 32px;
+    -webkit-column-gap: 32px;
+    -moz-column-gap: 32px;
+  }
+}
