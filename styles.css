@@ -134,3 +134,23 @@ a {
   display: flex;
   justify-content: space-between;
 }
+.ai-journey {
+  justify-content: center;
+  display: flex;
+  background: #eaf6fd;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+.ai-modules {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+.ai-modules .module-card {
+  flex: 1 1 320px;
+  margin: 0;
+}
+.module-card .sub-heading {
+  font-size: var(--font-m);
+  line-height: calc(var(--font-m) * 1.5);
+}
