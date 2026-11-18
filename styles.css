@@ -405,8 +405,20 @@ a:hover {
 
 .timeline-item p {
   margin: 0.55rem 0 0;
-  max-width: 62ch;
+  max-width: 68ch;
   color: var(--ink-soft);
+}
+
+.role-points {
+  margin: 0.85rem 0 0;
+  padding: 0 0 0 1.15rem;
+  max-width: 68ch;
+  color: var(--ink-soft);
+}
+
+.role-points li {
+  margin: 0.45rem 0;
+  line-height: 1.45;
 }
 
 .credentials {
