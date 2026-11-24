@@ -383,6 +383,7 @@ a:hover {
 
 .focus,
 .skills,
+.ai-projects,
 .credentials {
   border-top: 1px solid var(--line);
 }
@@ -401,46 +402,56 @@ a:hover {
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.45), transparent);
 }
 
+.skill-pill-blocks {
+  margin-top: 2.25rem;
+  display: grid;
+  gap: 2rem;
+}
+
 .skill-block-title {
-  margin: 2.5rem 0 0;
+  margin: 0 0 0.85rem;
   font-family: var(--font-display);
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   font-weight: 700;
   letter-spacing: -0.02em;
 }
 
-.skill-groups {
-  margin: 0.75rem 0 0;
+.skill-pills {
+  list-style: none;
+  margin: 0;
   padding: 0;
-  display: grid;
-  gap: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem 0.75rem;
 }
 
-.skill-group {
-  display: grid;
-  grid-template-columns: 10rem minmax(0, 1fr);
-  gap: 1rem 1.75rem;
-  padding: 1.15rem 0;
-  border-top: 1px solid var(--line);
+.skill-pills li {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.45rem 0.85rem;
+  border: 1px solid var(--ink);
+  background: var(--surface);
+  color: var(--ink);
+  font-size: 0.98rem;
+  font-weight: 600;
+  line-height: 1.25;
+  box-shadow: 3px 3px 0 var(--ash);
 }
 
-.skill-groups .skill-group:last-child {
-  border-bottom: 1px solid var(--line);
+.skill-pill-block:nth-child(1) .skill-pills li:nth-child(3n + 1) {
+  box-shadow: 3px 3px 0 var(--cyan);
 }
 
-.skill-group dt {
-  margin: 0;
-  font-family: var(--font-display);
-  font-size: 1.05rem;
-  font-weight: 700;
-  letter-spacing: -0.02em;
+.skill-pill-block:nth-child(1) .skill-pills li:nth-child(3n + 2) {
+  box-shadow: 3px 3px 0 var(--accent);
 }
 
-.skill-group dd {
-  margin: 0;
-  color: var(--ink-soft);
-  font-size: 1.05rem;
-  line-height: 1.55;
+.skill-pill-block:nth-child(2) .skill-pills li:nth-child(3n) {
+  box-shadow: 3px 3px 0 var(--amber);
+}
+
+.skill-pill-block:nth-child(3) .skill-pills li {
+  box-shadow: 3px 3px 0 var(--cyan-light);
 }
 
 .timeline {
@@ -513,6 +524,55 @@ a:hover {
 .role-points li {
   margin: 0.45rem 0;
   line-height: 1.45;
+}
+
+.project-gallery {
+  margin-top: 2.25rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.project-card {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.project-open img {
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: center;
+}
+
+.project-body h3 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  letter-spacing: -0.02em;
+}
+
+.project-body p {
+  margin: 0.55rem 0 0;
+  color: var(--ink-soft);
+  font-size: 1.02rem;
+  line-height: 1.5;
+}
+
+.project-link {
+  display: inline-block;
+  margin-top: 0.85rem;
+  margin-right: 1rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--ink);
+  border-bottom: 2px solid var(--accent);
+}
+
+.project-link:hover {
+  color: var(--accent-deep);
+  border-bottom-color: var(--cyan);
 }
 
 .cert-gallery {
@@ -711,8 +771,9 @@ a:hover {
 /* Motion */
 .reveal,
 .timeline-item,
-.skill-group,
-.cert-card {
+.skill-pill-block,
+.cert-card,
+.project-card {
   opacity: 0;
   transform: translateY(18px);
   transition: opacity 0.7s var(--ease), transform 0.7s var(--ease);
@@ -720,8 +781,9 @@ a:hover {
 
 .reveal.is-visible,
 .timeline-item.is-visible,
-.skill-group.is-visible,
-.cert-card.is-visible {
+.skill-pill-block.is-visible,
+.cert-card.is-visible,
+.project-card.is-visible {
   opacity: 1;
   transform: translateY(0);
 }
@@ -752,6 +814,7 @@ a:hover {
     box-shadow: 6px 6px 0 var(--accent-deep);
   }
 
+  .project-gallery,
   .cert-gallery {
     grid-template-columns: 1fr;
   }
@@ -770,10 +833,6 @@ a:hover {
     max-height: none;
   }
 
-  .skill-group {
-    grid-template-columns: 1fr;
-    gap: 0.35rem;
-  }
 
   .cert-card-wide {
     grid-column: auto;
@@ -857,8 +916,9 @@ a:hover {
 
   .reveal,
   .timeline-item,
-  .skill-group,
-  .cert-card {
+  .skill-pill-block,
+  .cert-card,
+  .project-card {
     opacity: 1;
     transform: none;
     transition: none;
