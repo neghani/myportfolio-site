@@ -394,29 +394,7 @@ a:hover {
 }
 
 .ai-proof {
-  margin-top: 1.25rem;
-}
-
-.ai-depth {
-  list-style: none;
-  margin: 2.25rem 0 0;
-  padding: 0;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.75rem 2rem;
-}
-
-.ai-depth h3 {
-  margin: 0 0 0.55rem;
-  font-family: var(--font-display);
-  font-size: 1.15rem;
-  letter-spacing: -0.02em;
-}
-
-.ai-depth p {
-  margin: 0;
-  color: var(--ink-soft);
-  font-size: 1.02rem;
+  margin-top: 1.75rem;
 }
 
 .experience {
@@ -555,6 +533,35 @@ a:hover {
   grid-column: 1 / -1;
 }
 
+.cert-pair {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 0;
+  border: 1px solid var(--ink);
+  background: var(--surface);
+  box-shadow: 6px 6px 0 var(--ash);
+  overflow: hidden;
+}
+
+.cert-pair .cert-open {
+  border: 0;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+.cert-pair .cert-open + .cert-open {
+  border-left: 1px solid var(--line);
+}
+
+.cert-pair .cert-open:hover,
+.cert-pair .cert-open:focus-visible {
+  box-shadow: none;
+  transform: none;
+  background: #fffaf5;
+  outline: 2px solid var(--cyan);
+  outline-offset: -2px;
+}
+
 .cert-open {
   display: block;
   width: 100%;
@@ -565,7 +572,8 @@ a:hover {
   box-shadow: 6px 6px 0 var(--ash);
   cursor: zoom-in;
   overflow: hidden;
-  transition: box-shadow 0.25s var(--ease), transform 0.25s var(--ease);
+  transition: box-shadow 0.25s var(--ease), transform 0.25s var(--ease),
+    background 0.25s var(--ease);
 }
 
 .cert-open:hover,
@@ -575,21 +583,21 @@ a:hover {
   outline: none;
 }
 
-.cert-card:nth-child(3n + 2) .cert-open {
+.cert-card:not(.cert-card-iit):nth-child(3n + 2) .cert-open {
   box-shadow: 6px 6px 0 var(--accent);
 }
 
-.cert-card:nth-child(3n) .cert-open {
+.cert-card:not(.cert-card-iit):nth-child(3n) .cert-open {
   box-shadow: 6px 6px 0 var(--amber);
 }
 
-.cert-card:nth-child(3n + 2) .cert-open:hover,
-.cert-card:nth-child(3n + 2) .cert-open:focus-visible {
+.cert-card:not(.cert-card-iit):nth-child(3n + 2) .cert-open:hover,
+.cert-card:not(.cert-card-iit):nth-child(3n + 2) .cert-open:focus-visible {
   box-shadow: 6px 6px 0 var(--accent-deep);
 }
 
-.cert-card:nth-child(3n) .cert-open:hover,
-.cert-card:nth-child(3n) .cert-open:focus-visible {
+.cert-card:not(.cert-card-iit):nth-child(3n) .cert-open:hover,
+.cert-card:not(.cert-card-iit):nth-child(3n) .cert-open:focus-visible {
   box-shadow: 6px 6px 0 var(--amber);
 }
 
@@ -601,9 +609,13 @@ a:hover {
   background: #fff;
 }
 
-.cert-card-wide .cert-open img {
-  aspect-ratio: 16 / 9;
+.cert-card-iit .cert-open img {
+  aspect-ratio: auto;
+  height: 100%;
+  min-height: 18rem;
+  max-height: 28rem;
   object-fit: contain;
+  object-position: center top;
   padding: 0.75rem;
 }
 
@@ -699,7 +711,6 @@ a:hover {
 /* Motion */
 .reveal,
 .timeline-item,
-.ai-depth li,
 .skill-group,
 .cert-card {
   opacity: 0;
@@ -709,7 +720,6 @@ a:hover {
 
 .reveal.is-visible,
 .timeline-item.is-visible,
-.ai-depth li.is-visible,
 .skill-group.is-visible,
 .cert-card.is-visible {
   opacity: 1;
@@ -742,9 +752,22 @@ a:hover {
     box-shadow: 6px 6px 0 var(--accent-deep);
   }
 
-  .ai-depth,
   .cert-gallery {
     grid-template-columns: 1fr;
+  }
+
+  .cert-pair {
+    grid-template-columns: 1fr;
+  }
+
+  .cert-pair .cert-open + .cert-open {
+    border-left: 0;
+    border-top: 1px solid var(--line);
+  }
+
+  .cert-card-iit .cert-open img {
+    min-height: 0;
+    max-height: none;
   }
 
   .skill-group {
@@ -834,7 +857,6 @@ a:hover {
 
   .reveal,
   .timeline-item,
-  .ai-depth li,
   .skill-group,
   .cert-card {
     opacity: 1;
