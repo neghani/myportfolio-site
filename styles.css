@@ -685,12 +685,6 @@ a:hover {
   line-height: 1.35;
 }
 
-.cred-note {
-  margin: 1.75rem 0 0;
-  color: var(--ink-soft);
-  font-size: 0.98rem;
-}
-
 .lightbox {
   position: fixed;
   inset: 0;

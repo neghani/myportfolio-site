@@ -1,0 +1,25 @@
+{
+  "name": "Ganesh Pilly — Engineering Leader",
+  "short_name": "Ganesh Pilly",
+  "description": "Portfolio of Ganesh Pilly — FinTech engineering leadership, platforms, and Generative AI.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#fef0e4",
+  "theme_color": "#fef0e4",
+  "lang": "en",
+  "icons": [
+    {
+      "src": "./imgs/profile.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./imgs/profile.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

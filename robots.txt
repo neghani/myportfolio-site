@@ -1,0 +1,10 @@
+# https://ganeshpilli.me/robots.txt
+User-agent: *
+Allow: /
+
+# Prefer the live portfolio; skip local/server helpers if present
+Disallow: /index.js
+Disallow: /app.js
+Disallow: /classic/
+
+Sitemap: https://ganeshpilli.me/sitemap.xml
